@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SearchActivity"
+    android:background="@color/DarkBlue"
+    >
+    <include layout="@layout/toolbar_layout"
+        android:id="@+id/Search_Activity_Toolbar"/>
+
+        >
+
+    <EditText
+        android:id="@+id/Search_Activity_edt_search"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/white"
+        android:hint="@string/search_hint"
+        android:paddingStart="10dp"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/Search_Activity_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Search_Activity_Toolbar" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:src="@drawable/search_img"
+            android:id="@+id/Search_Activity_img"
+            app:layout_constraintTop_toTopOf="@id/Search_Activity_edt_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/Search_Activity_edt_search"
+            app:layout_constraintBottom_toBottomOf="@id/Search_Activity_edt_search"
+            android:layout_marginEnd="10dp"
+            />
+
+    <TextView
+        android:id="@+id/Search_Activity_tv_first_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/Search_Activity_first_Category"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/Search_Activity_edt_search"
+        app:layout_constraintTop_toBottomOf="@id/Search_Activity_edt_search" />
+
+    <TextView
+        android:id="@+id/Search_Activity_tv_second_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/Search_Activity_second_Category"
+        android:textColor="@color/White"
+        app:layout_constraintStart_toEndOf="@id/Search_Activity_tv_first_category"
+        app:layout_constraintTop_toTopOf="@+id/Search_Activity_tv_first_category"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/Search_Activity_tv_third_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/Search_Activity_third_Category"
+        android:textColor="@color/White"
+        app:layout_constraintStart_toEndOf="@id/Search_Activity_tv_second_category"
+        app:layout_constraintTop_toTopOf="@+id/Search_Activity_tv_second_category"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/Search_Activity_tv_fourth_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/Search_Activity_fourth_Category"
+        android:textColor="@color/White"
+        app:layout_constraintStart_toEndOf="@id/Search_Activity_tv_third_category"
+        app:layout_constraintTop_toTopOf="@+id/Search_Activity_tv_second_category"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:id="@+id/Search_Activity_tv_all_categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/Search_Activity_all_Categories"
+        android:textColor="@color/Yellow"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Search_Activity_tv_third_category" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Search_Activity_rec_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/Search_Activity_bottom_nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Search_Activity_tv_all_categories"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginBottom="20dp"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/Search_Activity_bottom_nav_view"
+        app:menu="@menu/bottom_nav_menu"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

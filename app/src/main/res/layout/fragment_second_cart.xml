@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.SecondCartFragment"
+    android:padding="25dp"
+    android:background="@color/DarkBlue"
+    >
+
+    <TextView
+        android:id="@+id/Second_Fragment_tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/Second_Fragment_tvAddress"
+        android:textColor="@color/White"
+        android:textColorHint="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/Second_Fragment_edtAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/hint_address"
+        android:lines="2"
+        android:textColor="@color/White"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/Second_Fragment_tvAddress"
+        android:backgroundTint="@color/white"
+
+        />
+
+    <TextView
+        android:id="@+id/Second_Fragment_tvZipCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/zip_code"
+        android:textColor="@color/White"
+        android:textColorHint="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Second_Fragment_edtAddress" />
+
+    <EditText
+        android:id="@+id/Second_Fragment_edtZipCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/hint_zip_code"
+        android:textColor="@color/White"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/Second_Fragment_tvZipCode"
+        android:backgroundTint="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/Second_Fragment_tvPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/phone_number"
+        android:textColor="@color/White"
+        android:textColorHint="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Second_Fragment_edtZipCode"
+        />
+
+    <EditText
+        android:id="@+id/Second_Fragment_edtPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Phone Number"
+        android:textColor="@color/White"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Second_Fragment_tvPhoneNumber"
+        android:backgroundTint="@color/white"
+
+        />
+
+    <TextView
+        android:id="@+id/Second_Fragment_tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Email:"
+        android:textColor="@color/White"
+        android:textColorHint="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Second_Fragment_edtPhoneNumber" />
+
+    <EditText
+        android:id="@+id/Second_Fragment_edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Email"
+        android:textColor="@color/White"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Second_Fragment_tvEmail"
+        android:backgroundTint="@color/white"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Second_Fragment_edtEmail"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        >
+
+        <Button
+            android:id="@+id/Second_Fragment_btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Second_Fragment_btn_back"
+            android:textColor="@color/White"
+            android:textColorHint="#FFFFFF" />
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+
+            />
+        <Button
+        android:id="@+id/Second_Fragment_btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Second_Fragment_btn_next"
+            />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/Second_Fragment_tvtWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Warning"
+        android:textColor="@color/design_default_color_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

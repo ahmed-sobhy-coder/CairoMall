@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    android:elevation="10dp"
+    android:layout_margin="5dp"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/username"
+        android:id="@+id/review_layout_username"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/review_layout_username"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/review_text"
+        android:id="@+id/review_layout_review_text"
+        android:textSize="10dp"
+        android:textColor="@color/white"
+
+        />
+
+    <TextView
+        android:id="@+id/review_layout_review_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/review_text"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_layout_username"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
